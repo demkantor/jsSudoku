@@ -43,10 +43,10 @@ let setUpBlock = () =>{
     return block;
 }
 
-let isUniqueToBlock = ( square, block ) =>{
+let isUniqueToBlock = ( number, block ) =>{
     for( let i=0; i<block.length; i++ ){
         for( let j=0; j<block[i].length; j++){
-            if( block[i][j].number === square.number ){
+            if( block[i][j].number === number ){
                 return false;
             } //end match
         } // end inner
@@ -54,6 +54,10 @@ let isUniqueToBlock = ( square, block ) =>{
     return true;
 }
 
-let isUniqueToRow = ( square, row ) =>{
+let isUniqueToColumn = ( number, column ) =>{
+    const blockColumn = column %3;
+}
 
+let isUniqueToRow = ( number, row ) =>{
+    const blockRow = row %3;
 }

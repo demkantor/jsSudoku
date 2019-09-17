@@ -32,8 +32,10 @@ class Square {
 
 I think I really just need to check if the number for squares are unique to a row or block so there's some really simple functions:
 
-```let isUniqueToBlock = ( square, block ) =>{...```
+```let isUniqueToBlock = ( number, block ) =>{...```
 
-```let isUniqueToRow = ( square, row ) =>{...```
+```let isUniqueToColumn = ( number, column ) =>{...```
+
+```let isUniqueToRow = ( number, row ) =>{...```
 
 ...and I think that's all I'm really going to need to get this off the ground logically. Anyone can then just deal with it on the front end as they see fit - I plan on doing Cat sudoku with cat pictures.
