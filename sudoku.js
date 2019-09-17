@@ -39,6 +39,6 @@ let isUniqueToBlock = ( square, block ) =>{
     return true;
 }
 
-let isUniqueToRow = ( number, row ) =>{
+let isUniqueToRow = ( square, row ) =>{
 
 }
