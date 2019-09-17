@@ -1,8 +1,5 @@
 let board = [];
 let testBlock = [ 
-    [ { number: 1, visible: false }, { number: 2, visible: false }, { number: 3, visible: false }],
-    [ { number: 4, visible: false }, { number: 5, visible: false }, { number: 6, visible: false }],
-    [ { number: 7, visible: false }, { number: 8, visible: false }]
     ];
 
 class Square {
@@ -25,7 +22,25 @@ class Square {
 let testy = new Square( 3 );
 
 let setUpBlock = () =>{
-    
+    let block = [ [],[],[] ];
+    let row = 0;
+    let square = 0;
+    while( block[2].length < 3 ){
+        let randoInty = Math.floor(Math.random() * 9) + 1;
+        if( isUniqueToBlock( {number: randoInty}, block ) ){
+            if( block[0].length <3 ){
+                block[0].push( new Square( randoInty ) );
+            } //end 1st row
+            else if( block[1].length<3 ){
+                block[1].push( new Square( randoInty ) );
+            } // end  2nd row
+            else{
+                block[2].push( new Square( randoInty ) );
+            } //end 3rd row
+        } // end unique to block
+    } // end while
+    console.log( block );
+    return block;
 }
 
 let isUniqueToBlock = ( square, block ) =>{
